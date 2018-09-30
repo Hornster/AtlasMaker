@@ -2,6 +2,7 @@ package GUI;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 
 import java.io.IOException;
@@ -9,19 +10,19 @@ import java.io.IOException;
 public class GUIController
 {
     @FXML
-    private Pane pane;
+    private GridPane root;
 
 
-    public void initialize() throws IOException
+    public void initialize(GridPane root) throws IOException
     {
 
-
+        this.root = root;
 
 
     }
 
-    public Pane getRoot()
+    public GridPane getRoot()
     {
-        return pane;
+        return root;
     }
 }

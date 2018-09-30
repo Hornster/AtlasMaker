@@ -3,7 +3,9 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+
 
 import java.io.IOException;
 
@@ -18,16 +20,14 @@ public class AtlasMakerGUI extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         //Initialize window
-        Parent root = null;
+        GridPane root = null;
         primaryStage.setTitle("AtlasMaker");
         try
         {
             root = FXMLLoader.load(getClass().getClassLoader().getResource("GUI/gui.fxml"));
-            //Perform controller initialization
-            //TODO
-            //-przystosowac reszte kodu. Wsio powyzej pasuje.
+
             guiController = new GUIController();
-            guiController.initialize();
+            guiController.initialize(root);
 
             Scene scene = new Scene(guiController.getRoot());
             primaryStage.setScene(scene);

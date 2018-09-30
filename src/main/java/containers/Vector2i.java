@@ -1,8 +1,11 @@
 package containers;
+
+import java.util.StringJoiner;
+
 //Simple 2D vector of integer values.
 public class Vector2i
 {
-    public int x,y;
+    public Integer x,y;
     public Vector2i()
     {
         x = 0;
@@ -12,5 +15,10 @@ public class Vector2i
     {
         this.x = x;
         this.y = y;
+    }
+    @Override
+    public String toString()
+    {
+        return '[' + x.toString() + ", " + y.toString() + ']';
     }
 }
