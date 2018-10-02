@@ -23,7 +23,7 @@
     </padding>
 
     <TableView fx:id="imageSetsTable"
-               GridPane.columnIndex="0" GridPane.rowIndex="1"
+               GridPane.columnIndex="0" GridPane.rowIndex="0"
     >
         <columns>
             <TableColumn text="Image set name" fx:id="imageSetNameColumn">
@@ -53,6 +53,34 @@
         </sortOrder>
 
     </TableView>
+
+    <!-- The text field for input of next image set's first image path -->
+    <TextField fx:id="pathSourceTextField"
+               alignment="BOTTOM_CENTER"
+               GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <!-- The text field indicating the output path for the created atlas -->
+    <TextField fx:id="pathDestTextField"
+               alignment="BOTTOM_CENTER"
+               GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <!-- The text field allowing input for the name of the atlas -->
+    <TextField fx:id="atlasNameTextField"
+               alignment="BOTTOM_CENTER"
+               GridPane.columnIndex="0" GridPane.rowIndex="3"
+               text="graphicsAtlas.png"/>
+
+    <!-- The button for opening the directory dialog box -->
+    <Button alignment="BOTTOM_CENTER"
+            GridPane.columnIndex="1" GridPane.rowIndex="1"
+            text="Image set Path..."/>
+    <!-- The button for confirming the choice - begins load of the image sequence -->
+    <Button alignment="BOTTOM_CENTER"
+            GridPane.columnIndex="2" GridPane.rowIndex="1"
+            text="Add"/>
+    <!-- The button for opening the directory dialog box -->
+    <Button alignment="BOTTOM_LEFT"
+            GridPane.columnIndex="1" GridPane.rowIndex="2"
+            text="Save path..."/>
+
 
 </GridPane>
 
