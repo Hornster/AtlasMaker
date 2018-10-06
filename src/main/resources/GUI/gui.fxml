@@ -32,22 +32,11 @@
             <TableColumn text="Images count">
                 <cellValueFactory><PropertyValueFactory property="imageCount"/></cellValueFactory>
             </TableColumn>
-            <TableColumn text="Image size">
+            <TableColumn text="Single image size">
                 <cellValueFactory><PropertyValueFactory property="singleImageSize"/></cellValueFactory>
             </TableColumn>
         </columns>
-    <items>
-        <FXCollections fx:factory="observableArrayList">
-            <ImageSet imageSetName="Jacob" imageCount="569"
-                      />
-            <ImageSet imageSetName="Isabella" imageCount="94"
-                      />
-            <ImageSet imageSetName="Ethan" imageCount="124"
-                      />
-            <ImageSet imageSetName="Emma" imageCount="406"
-                      />
-        </FXCollections>
-    </items>
+
         <sortOrder>
             <fx:reference source="imageSetNameColumn"/>
         </sortOrder>
@@ -71,7 +60,7 @@
     <!-- The button for opening the directory dialog box -->
     <Button alignment="BOTTOM_CENTER"
             GridPane.columnIndex="1" GridPane.rowIndex="1"
-            text="Image set Path..."/>
+            text="Source..."/>
     <!-- The button for confirming the choice - begins load of the image sequence -->
     <Button alignment="BOTTOM_CENTER"
             GridPane.columnIndex="2" GridPane.rowIndex="1"
@@ -79,7 +68,11 @@
     <!-- The button for opening the directory dialog box -->
     <Button alignment="BOTTOM_LEFT"
             GridPane.columnIndex="1" GridPane.rowIndex="2"
-            text="Save path..."/>
+            text="Destination..."/>
+    <!-- Responsible for starting the atlas creation -->
+    <Button alignment="BOTTOM_LEFT"
+            GridPane.columnIndex="2" GridPane.rowIndex="3"
+            text="Create!"/>
 
 
 </GridPane>
