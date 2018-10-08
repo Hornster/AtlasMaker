@@ -8,6 +8,9 @@ public class ImageSet
 {
     //The name of the set is the name of the first file in the set.
     //private String imageSetName;
+    //TODO
+    //Add paths to each image. Preferably create small container for that and throw in instead of Image.
+    // (Image goes to tha container, too)
     private LinkedList<Image> images;
     //private Vector2i singleImageSize;
    // private int imageCount;

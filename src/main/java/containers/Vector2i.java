@@ -21,4 +21,11 @@ public class Vector2i
     {
         return '[' + x.toString() + ", " + y.toString() + ']';
     }
+    @Override
+    public boolean equals(Object other)
+    {
+        return other instanceof Vector2i &&
+                ((Vector2i) other).x.equals(this.x) &&
+                ((Vector2i) other).y.equals(this.y);
+    }
 }
