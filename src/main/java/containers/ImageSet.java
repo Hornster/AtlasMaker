@@ -47,3 +47,5 @@ public class ImageSet
 
 
 }
+//TODO
+//Hibernate Beyond Copy Paste obejrz

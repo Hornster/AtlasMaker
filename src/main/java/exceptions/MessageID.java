@@ -1,6 +1,8 @@
 package exceptions;
 /**
  * Enum for selection of */
+//TODO
+    //Wypierdzielić w cholerę
 public enum MessageID
 {
     WRONGFILENAME(0, "The name of the file did not have any number in it! Name: ");
