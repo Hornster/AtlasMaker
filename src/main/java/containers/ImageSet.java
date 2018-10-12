@@ -6,46 +6,47 @@ import java.util.LinkedList;
 
 public class ImageSet
 {
-    //The name of the set is the name of the first file in the set.
-    //private String imageSetName;
-    //TODO
-    //Add paths to each image. Preferably create small container for that and throw in instead of Image.
-    // (Image goes to tha container, too)
-    private LinkedList<Image> images;
+
     //private Vector2i singleImageSize;
    // private int imageCount;
-    //Data that will be saved together with the atlas.
+    /**Data that will be saved together with the atlas.*/
     private ImgSetSaveData imgSetSaveData;
+    /**The path to and the atlas itself.*/
+    private ImagesSource imagesSource;
 
     public ImageSet()
     {
-        this(new LinkedList<Image>(), new Vector2i(), "");
+        this(new ImagesSource(), new Vector2i(), "");
     }
-    public ImageSet(LinkedList<Image> imageSet, Vector2i singleImageSize, String imageSetName)
+    public ImageSet(ImagesSource imagesSourceData, Vector2i singleImageSize, String imageSetName)
     {
-        this(imageSet, singleImageSize, imageSet.size(), imageSetName);
+        this(imagesSourceData, singleImageSize, imagesSourceData.getImagesSequence().size(), imageSetName);
     }
-    public ImageSet(LinkedList<Image> imageSet, Vector2i singleImageSize, int imagesCount, String imageSetName)
+    public ImageSet(ImagesSource imageSet, Vector2i singleImageSize, int imagesCount, String imageSetName)
     {
-        images = imageSet;
+        imagesSource = imageSet;
         imgSetSaveData = new ImgSetSaveData(imageSetName, imagesCount, singleImageSize);
     }
     //GETTERS
-    public LinkedList<Image> getImageSet()
+    /**Returns the container for path to and the images themselves.*/
+    public ImagesSource getImagesSourceData()
     {
-        return images;
+        return imagesSource;
     }
-    public ImgSetSaveData GetImgSetSaveData()
+    /**Returns the additional data about the image set. (like name, images count...)*/
+    public ImgSetSaveData getImgSetSaveData()
     {
         return imgSetSaveData;
     }
     //SETTERS
-    public void setImageSet(LinkedList<Image> newImageSet)
+    public void setImageSet(ImagesSource newImagesSourceData)
     {
-        images = newImageSet;
+        imagesSource = newImagesSourceData;
+    }
+    public void setImageSet(ImgSetSaveData newImgSetSaveData)
+    {
+        imgSetSaveData = newImgSetSaveData;
     }
 
 
 }
-//TODO
-//Hibernate Beyond Copy Paste obejrz
