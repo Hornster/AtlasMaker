@@ -3,7 +3,7 @@ package containers;
 import javafx.scene.image.Image;
 
 import java.util.LinkedList;
-
+/**Stores images of given set and path to the first image in the sequence.*/
 public class ImagesSource
 {
     /**The name of the set is the name of the first file in the set.*/
