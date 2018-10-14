@@ -26,8 +26,7 @@ public class AtlasMakerGUI extends Application {
         {
             root = FXMLLoader.load(getClass().getClassLoader().getResource("GUI/gui.fxml"));
 
-            guiController = new GUIController();
-            guiController.initialize(root);
+            guiController = GUIController.getInstance();
 
             Scene scene = new Scene(guiController.getRoot());
             primaryStage.setScene(scene);

@@ -121,7 +121,7 @@ public class ImageChecker
         return additionalZeros + newNumber.toString();
     }
     /**Applies newly created number to the old file name, replacing the old number.*/
-    private String applyNewNumber(String fileName, String newNumber, Vector2i position)
+    public String applyNewNumber(String fileName, String newNumber, Vector2i position)
     {
         String prefix = fileName.substring(0, position.x);
         String suffix = fileName.substring(position.y);
